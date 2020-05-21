@@ -1,0 +1,31 @@
+.index-main {
+  position: relative;
+}
+.index-main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 305px;  
+  background: #65a93c center no-repeat url("../img/index-back-mobile.jpg");
+}
+
+@media (min-width: $tablet) {
+  .index-main::before {
+    background: none;
+  }
+}
+
+@media (min-width: $desktop) {
+  .index-main {
+    position: static;
+  }
+  .index-main::before{
+    width: 50%;
+    right: 0;
+    height: 700px;
+    background: #65a93c center no-repeat url("../img/index-back-desk.jpg");
+    background-size: cover;
+  }
+}

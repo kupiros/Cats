@@ -1,0 +1,334 @@
+.example {
+  background-color: #f2f2f2;
+}
+
+.example__title {
+  padding: 20px 0;
+}
+
+.example__parph {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 25px;
+}
+
+.example__list {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.example--wraper {
+  margin-bottom: 30px;
+}
+
+.example__item {
+  width: 125px;
+  height: 55px;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  b {
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  span {
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    padding: 0 10px;
+    background-color: #f2f2f2;
+  }
+}
+
+.example__text {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.example__column2 {
+  height: 330px;
+  width: 280px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.example__control {
+  position: absolute;
+  bottom: 35px;
+  display: flex;
+  width: 200px;
+  align-items: center;
+  justify-content: space-between;
+  &::before{
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    width: 82px;
+    height: 13px;
+    background-color: white;
+    border: 1px solid #cfcfcf;
+    border-radius: 50px;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 64px;
+    width: 34px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #68b738;
+  }
+  &--after::after {
+    left: 102px;
+  }
+}
+
+.example__img {
+  width: 280px;
+  height: 240px;
+  position: relative;
+}
+
+.example__before {
+  height: 100%;
+  width: 0%;
+  position: absolute;
+  left: 0;
+  background-image: url('../img/after-mobile.png');
+}
+
+.example__after {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  background-image: url('../img/before-mobile.png');
+  background-position: right;
+}
+
+.example__button {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 3px;
+}
+
+.example__slider {
+  display: none;
+}
+
+@media(min-width: $tablet) {
+  .example {
+    background-color: transparent;
+    position: relative;
+    &::before, &::after {
+      content: "";
+      position: absolute;
+      z-index: -5;
+      bottom: 0;
+      height: 450px;
+      
+    }
+    &::before {
+      width: 100%;
+      background-color: #eaeaea;
+    }
+    &::after {
+      width: 60%;
+      left: 0;
+      background-color: #f2f2f2;
+    }
+  }
+
+  .example__background {
+    position: absolute;
+    background: linear-gradient(to left, #eaeaea 50%, #f2f2f2 50%);
+    background-size: 1200px;
+    background-position-x: 50%;
+    width: 100%;
+    height: 450px;
+    bottom: 0;
+  }
+
+  .example__title {  
+    padding: 0px;
+    padding-top: 40px;
+    margin-bottom: 65px;
+  }
+  .example__parph {
+    font-size: 16px;
+    line-height: 24px; 
+    margin-bottom: 55px;
+  }
+  .example--wraper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 85px;
+  }
+  .example__list {
+    width: 370px;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .example__item {
+    width: 160px;
+    height: 75px;
+    b {
+      font-size: 30px;
+    }
+    span {
+      bottom: -15px;
+      font-size: 14px;
+      line-height: 14px;
+      background-color: white;
+    }
+  }  
+  .example__text {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: right;
+    span {
+      display: block;
+    }
+  }
+
+  .example__column2 {
+    width: 600px;
+    height: 635px
+  }
+
+  .example__control {
+    width: 580px;
+    bottom: 65px;
+    &::before, &::after {
+      display: none;
+    }
+  }
+
+  .example__button {
+    font-size: 20px;
+    line-height: 20px;
+    border-bottom: 2px dotted #bebebe;
+    &:hover, &:focus {
+      border-bottom: 2px solid #989898;
+      outline: none;
+    }
+    &:active {
+      border-bottom: 2px solid transparent;
+    }
+  }
+
+  .example__slider {
+    display: block;
+    -webkit-appearance: none;
+    width: 434px;
+    height: 6px;
+    background-color: #cfcfcf;
+    border-radius: 50px;
+    outline: none;
+    cursor: pointer;
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 34px;
+      height: 34px;
+      background: radial-gradient(#68b738 5px, white 6px);
+      border: 2px solid #cdcdcd;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);    
+    }
+    &::-moz-range-thumb {
+      width: 34px;
+      height: 34px;
+      background: radial-gradient(#68b738 5px, white 6px);
+      border: 2px solid #cdcdcd;
+      border-radius: 50%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);    
+    }
+    &:hover::-webkit-slider-thumb {
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    }
+    &:active::-webkit-slider-thumb {
+      border: 2px solid #68b738;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.30);
+    }
+    &:hover::-moz-range-thumb {
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.25);
+    }
+    &:active::-moz-range-thumb {
+      border: 2px solid #68b738;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.30);
+    }
+  }
+
+  .example__img {
+    width: 600px;
+    height: 520px;
+  }
+  
+  .example__before {
+    width: 50%;
+    background-image: url('../img/after-desktop.png');
+  }
+  
+  .example__after {
+    width: 50%;
+    background-image: url('../img/before-desktop.png');
+  }
+
+}
+
+@media(min-width: $desktop) {
+  .example .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  .example__column1 {
+    width: 440px;
+  }
+  .example__title {
+    padding: 0;
+    margin-bottom: 145px;
+  }
+  .example__parph {
+    margin-bottom: 65px;
+  }
+  .example--wraper {
+    display: block;
+    margin-bottom: 60px;
+  }
+  .example__list {
+    margin-bottom: 55px;
+  }
+  .example__item span {
+    background-color: #f2f2f2;
+  }
+  .example__text {
+    text-align: left;
+    span {
+      display: inline;
+      margin-right: 60px;
+    }
+  }
+  .example__column2 {
+    margin: 0;
+  }
+}

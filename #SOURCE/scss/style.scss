@@ -1,0 +1,40 @@
+@import "_normalize";
+
+
+$mobile-only: 747px;
+$tablet: 748px;
+$desktop: 1260px;
+
+@font-face {
+  font-family: 'Oswald';
+  src: url('../fonts/Oswald-Regular.woff2') format('woff2'), url('../fonts/Oswald-Regular.woff') format('woff'), url('../fonts/Oswald-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: '';
+  src: url('../fonts/Oswald-Medium.woff2') format('woff2'), url('../fonts/Oswald-Medium.woff') format('woff'), url('../fonts/Oswald-Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+body {
+  min-width: 320px;
+  font-family: "Oswald", Arial, sans-serif;
+}
+
+.container {
+  padding: 0 20px;
+  max-width: $desktop;
+  margin: 0 auto;
+}
+
+@import "_page-header";
+@import "_index-main";
+@import "_section-title";
+@import "_promo";
+@import "_program";
+@import "_about";
+@import "_example";
+@import "_map";
+@import "_page-footer";
+@import "_form";
+@import "_catalog";
