@@ -1957,6 +1957,10 @@ body {
             transform: translateX(-50%);
   }
 
+  .catalog__item picture img {
+    max-width: none;
+  }
+
   .catalog__item h3 {
     padding-top: 120px;
     font-size: 20px;

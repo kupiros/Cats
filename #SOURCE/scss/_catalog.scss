@@ -235,6 +235,9 @@
       top: -50px;
       left: 50%;
       transform: translateX(-50%);
+      img {
+        max-width: none;
+      }
     }
     h3 {
       padding-top: 120px;
