@@ -232,7 +232,7 @@
     margin-bottom: 80px;
     picture {
       position: absolute;
-      bottom: 300px;
+      top: -50px;
     }
     h3 {
       padding-top: 120px;
@@ -247,7 +247,7 @@
       line-height: 16px;
       border-collapse: collapse;
       width: 100%;
-      margin-bottom: 30px;
+      margin-bottom: auto;
       tr {
         border-bottom: 2px solid #cdcdcd;
         height: 33px;
@@ -255,6 +255,7 @@
     }
     a {
       width: 100%;
+      margin-top: 15px;
     }
     &--last {
       background-color: white;

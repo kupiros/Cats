@@ -1950,7 +1950,7 @@ body {
 
   .catalog__item picture {
     position: absolute;
-    bottom: 300px;
+    top: -50px;
   }
 
   .catalog__item h3 {
@@ -1967,7 +1967,7 @@ body {
     line-height: 16px;
     border-collapse: collapse;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: auto;
   }
 
   .catalog__item table tr {
@@ -1977,6 +1977,7 @@ body {
 
   .catalog__item a {
     width: 100%;
+    margin-top: 15px;
   }
 
   .catalog__item--last {
@@ -2055,8 +2056,13 @@ body {
     margin-bottom: 80px;
   }
 
+  .promo__parph {
+    max-width: 500px;
+  }
+
   .promo__title {
     padding-top: 85px;
+    max-width: 500px;
   }
 
   .promo__img {
